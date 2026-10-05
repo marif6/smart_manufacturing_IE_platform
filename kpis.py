@@ -42,3 +42,15 @@ for minutes in planned_list :
     a= availability(minutes, 60)
     if a < 0.88 :
         print(minutes, "low availability", round(a, 3))
+
+
+shift1= {"line": "line 1", "planned": 480, "downtime": 60}
+print(shift1["planned"])
+print(shift1["downtime"])
+shift1["downtime"] = 90
+print(shift1["downtime"])
+
+
+def downtime_percentage (planned_minutes, downtime_minutes) :
+    return downtime_minutes/ planned_minutes *100
+print (downtime_percentage(480, 60))
